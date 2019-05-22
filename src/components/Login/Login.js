@@ -61,6 +61,7 @@ class Login extends Component {
             placeholder={strings.email}
             onChangeText={this.emailChanged}
             value={this.state.email}
+            testID="usernameField"
           />
           <Text style={TextStyles.fieldTitle}>
             {strings.password}
@@ -69,11 +70,13 @@ class Login extends Component {
             placeholder={strings.password}
             value={this.state.password}
             onChangeText={this.passwordChanged}
+            testID="passwordField"
             secureTextEntry
           />
           <ErrorView errors={errors} />
           <Button
             onPress={this.login}
+            testID="loginButton"
             title={isLoading ? strings.loading : strings.login}
           />
         </View>

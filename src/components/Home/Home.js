@@ -23,10 +23,10 @@ class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={TextStyles.lightTitle}>
+        <Text testID="homeLabel" style={TextStyles.lightTitle}>
           {strings.home}
         </Text>
-        <Text>
+        <Text testID="welcomeLabel">
           {this.getMessage()}
         </Text>
       </View>

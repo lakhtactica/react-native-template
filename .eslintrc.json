@@ -2,7 +2,9 @@
     "env": {
         "node": true,
         "browser": true,
-        "es6": true
+        "es6": true,
+        "jest": true,
+        "jasmine": true
     },
     "parser": "babel-eslint",
     "extends": [
@@ -13,6 +15,12 @@
     "rules": {
         "react/jsx-filename-extension": ".js",
         "react/forbid-prop-types": false,
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
         "import/order": ["error", {"groups": ["builtin", "external", "parent", "sibling", "index"]}]
+    },
+    "globals": {
+        "element": "readonly",
+        "by": "readonly",
+        "device": "readonly"
     }
 }
