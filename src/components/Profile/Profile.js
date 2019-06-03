@@ -29,13 +29,14 @@ class Profile extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={TextStyles.fieldTitle}> {strings.profile} </Text>
+        <Text style={TextStyles.fieldTitle} testID="profileTitle"> {strings.profile} </Text>
         <Text>
           {strings.profileMessage}
         </Text>
         <Button
           title={strings.logout}
           onPress={this.logout}
+          testID="logoutButton"
         />
       </View>
     );
